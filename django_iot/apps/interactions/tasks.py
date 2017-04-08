@@ -61,6 +61,9 @@ def pull_status(device_id=None, **kwargs):
     # return [status.pk]
     raise NotImplementedError
 
+@shared_task
+def myTask(**kwargs):
+    return "It Worked"
 
 @shared_task
 def refresh_all(**kwargs):
