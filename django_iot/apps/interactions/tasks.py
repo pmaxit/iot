@@ -67,9 +67,10 @@ def refresh_all(**kwargs):
     """
     Refreshes data and status for all devices
     """
-    for device in Device.objects.all():
-        pull_status(device.pk)
-        pull_attributes(device.pk)
+    return "IT WORKED! "
+    #for device in Device.objects.all():
+    #    pull_status(device.pk)
+    #    pull_attributes(device.pk)
 
 
 @shared_task
