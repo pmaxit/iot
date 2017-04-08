@@ -70,7 +70,6 @@ def refresh_all(**kwargs):
     """
     Refreshes data and status for all devices
     """
-    print "hello world"
     return "IT WORKED! "
     #for device in Device.objects.all():
     #    pull_status(device.pk)
