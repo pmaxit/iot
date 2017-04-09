@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 class Device(models.Model):
     # created and updated
@@ -20,6 +20,9 @@ class Device(models.Model):
     # location
     # you may want to add choices to this
     location = models.CharField(max_length=100)
+
+    # User foreign key
+    #user = models.ForeignKey(User, unique=True)
 
     def __str__(self):
         return self.name

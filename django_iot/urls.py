@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 from apps.devices import views
 from django.contrib.auth import views as auth_views
+from apps.devices.forms import LoginForm
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index, name='home'),
-    url(r'^login/$', auth_views.login, {'template_name': 'login.html'}, name='login'),
+    url(r'^create/$', views.create, name='create'),
+    url(r'^login/$', auth_views.login, {'template_name': 'login.html','authentication_form': LoginForm}, name='login'),
     url(r'^logout/$', auth_views.logout,{'template_name':'logout.html'}, name='logout'),
 
 ]
